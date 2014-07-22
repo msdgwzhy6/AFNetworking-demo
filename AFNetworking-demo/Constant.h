@@ -11,7 +11,7 @@
 
 
 #define SERVER_IP                     @"http://192.168.1.111:8088"
-#define SERVER_INTERFACES             @"%@/testservice/interfaces"
+#define SERVER_INTERFACES             @"%@/testservice/interfaces/"
 
 
 #endif
