@@ -37,4 +37,24 @@
         }
     }];
 }
+
++ (AFHTTPRequestOperation *)getNewsDataList:(NSDictionary *)paramDic
+                              withBlock:(void (^)(NSArray *list, NSError *error))block{
+    
+    NSLog(@"paramDic%@",paramDic);
+    
+    return [[APIClient sharedClient] POST:@"getnewslist.do" parameters:paramDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *result = responseObject;
+        NSLog(@"result =%@",result);
+        NSArray *list = [result objectForKey:@"success"];
+        if ([list isKindOfClass:[NSArray class]] && block) {
+            block(list, nil);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
 @end

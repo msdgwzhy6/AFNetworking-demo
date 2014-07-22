@@ -80,9 +80,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NewsDetailViewController *detail = [[NewsDetailViewController alloc]init];
-    NSDictionary *item =  self.dataArray[indexPath.row];
+    News *item =  self.dataArray[indexPath.row];
     NSString *baseApiURL = [NSString stringWithFormat:SERVER_INTERFACES,SERVER_IP];
-    detail.urlString = [NSString stringWithFormat:@"%@/getNewsInfoByid.do?modelid=%@&topicid=%@",baseApiURL,[item objectForKey:@"modelid"],[item objectForKey:@"topicid"]];
+    detail.urlString = [NSString stringWithFormat:@"%@/getNewsInfoByid.do?modelid=%@&topicid=%@",baseApiURL,item.modelid,item.newsID];
     [self.navigationController pushViewController:detail animated:YES];
 }
 
