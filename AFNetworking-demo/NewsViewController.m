@@ -31,6 +31,15 @@
     // Do any additional setup after loading the view from its nib.
     self.title = @"资讯";
     self.dataArray = [NSMutableArray array];
+    
+    //假数据
+    NSMutableArray *testarray = [NSMutableArray array];
+    for (int i=0; i<20; i++) {
+        NSDictionary *dic = @{@"topictitle": [NSString stringWithFormat:@"title==%d",i]};
+        [testarray addObject:dic];
+    }
+    [self.dataArray addObjectsFromArray:testarray];
+    
     [self loadData];
 }
 
@@ -56,11 +65,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    static NSString *CellIdentifier = @"newscell";
+    [self.myTableView registerClass:[NewsCell class] forCellReuseIdentifier:CellIdentifier];
+    [self.myTableView registerNib:[UINib nibWithNibName:@"NewsCell" bundle:nil] forCellReuseIdentifier:CellIdentifier];
     
     NewsCell *cell = (NewsCell*)[tableView dequeueReusableCellWithIdentifier:@"newscell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    cell.newstitle.text=[[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"title"];
+    cell.newstitle.text=[[self.dataArray objectAtIndex:indexPath.row] objectForKey:@"topictitle"];
     
     return cell;
     
