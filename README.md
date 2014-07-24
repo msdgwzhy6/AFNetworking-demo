@@ -20,3 +20,6 @@ vendor 各种第三方组件
   category              各种实用扩展
   
 Constant.h 项目中用到的各种宏定义 已经包含到了**Prefix.pch文件中
+
+
+server.php  服务器端与afnetworking交互的demo
