@@ -14,8 +14,9 @@
 + (AFHTTPRequestOperation *)getUser:(NSDictionary *)paramDic withBlock:(void (^)(User *user, NSError *error))block{
     
     NSLog(@"paramDic%@",paramDic);
+    NSDictionary *par = @{@"action": @"userlist"};
     
-    return [[APIClient sharedClient] POST:@"getuser.do" parameters:paramDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    return [[APIClient sharedClient] POST:@"api-test.php" parameters:par success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *result = responseObject;
         
         User *user =  [User objectFromDictionary:[result objectForKey:@"success"]];

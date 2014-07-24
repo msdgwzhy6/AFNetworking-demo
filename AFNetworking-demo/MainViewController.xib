@@ -9,6 +9,7 @@
                 <outlet property="email" destination="3X3-ZJ-lqO" id="Dzo-nh-ITi"/>
                 <outlet property="headPhoto" destination="61G-OQ-Iky" id="ZB1-SZ-Yxu"/>
                 <outlet property="qq" destination="qUe-1k-lJR" id="0RP-co-IjK"/>
+                <outlet property="request" destination="uDq-1R-9RL" id="eRF-MN-UlL"/>
                 <outlet property="userName" destination="MJs-yK-Pfw" id="Eyz-ix-Gym"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -69,6 +70,16 @@
                     </state>
                     <connections>
                         <action selector="newsTouched:" destination="-1" eventType="touchUpInside" id="TWm-Zy-RXS"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDq-1R-9RL">
+                    <rect key="frame" x="157" y="384" width="52" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="request">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="touched:" destination="-1" eventType="touchUpInside" id="Y67-MK-g40"/>
                     </connections>
                 </button>
             </subviews>

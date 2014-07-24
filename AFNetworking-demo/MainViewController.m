@@ -56,4 +56,8 @@
     NewsViewController *news = [[NewsViewController alloc]init];
     [self.navigationController pushViewController:news animated:YES];
 }
+
+- (IBAction)touched:(id)sender {
+    [self loadUserData];
+}
 @end

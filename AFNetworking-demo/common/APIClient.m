@@ -16,7 +16,7 @@ static APIClient *_sharedClient = nil;
     
     dispatch_once(&onceToken, ^{
         
-        NSString *baseApiURL = [NSString stringWithFormat:SERVER_INTERFACES,SERVER_IP];
+        NSString *baseApiURL = @"http://api.skyfox.org/";
         
         _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:baseApiURL]];
         [_sharedClient setSecurityPolicy:[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey]];
@@ -41,6 +41,24 @@ static APIClient *_sharedClient = nil;
         [_sharedClient.reachabilityManager startMonitoring];
     });
     
+#warning:需要设置 很重要
+//TODO:需要设置 很重要
+    
+//http://blog.csdn.net/xn4545945/article/details/37945711 详细介绍
+//http://samwize.com/2012/10/25/simple-get-post-afnetworking/
+    
+    //发送json数据
+    _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];
+    //响应json数据
+    _sharedClient.responseSerializer  = [AFJSONResponseSerializer serializer];
+
+    //发送二进制数据
+    //_sharedClient.requestSerializer = [AFHTTPRequestSerializer serializer];
+    //响应二进制数据
+    //_sharedClient.responseSerializer  = [AFHTTPResponseSerializer serializer];
+    
+    //设置响应内容格式
+    _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     return _sharedClient;
 }
 @end
