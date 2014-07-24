@@ -16,7 +16,10 @@ static APIClient *_sharedClient = nil;
     
     dispatch_once(&onceToken, ^{
         
-        NSString *baseApiURL = @"http://api.skyfox.org/";
+#warning:IOS后台接口应用地址
+        
+        //NSString *baseApiURL = [NSString stringWithFormat:SERVER_INTERFACES,SERVER_IP];
+        NSString *baseApiURL = @"http://api.skyfox.org/";  //测试地址
         
         _sharedClient = [[APIClient alloc] initWithBaseURL:[NSURL URLWithString:baseApiURL]];
         [_sharedClient setSecurityPolicy:[AFSecurityPolicy policyWithPinningMode:AFSSLPinningModePublicKey]];
@@ -44,8 +47,9 @@ static APIClient *_sharedClient = nil;
 #warning:需要设置 很重要
 //TODO:需要设置 很重要
     
-//http://blog.csdn.net/xn4545945/article/details/37945711 详细介绍
+//http://blog.csdn.net/xn4545945/article/details/37945711 详细介绍与其他具体参数
 //http://samwize.com/2012/10/25/simple-get-post-afnetworking/
+//工程中server.php 对应php版本的服务器端
     
     //发送json数据
     _sharedClient.requestSerializer = [AFJSONRequestSerializer serializer];

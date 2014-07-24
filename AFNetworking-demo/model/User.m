@@ -14,9 +14,16 @@
 + (AFHTTPRequestOperation *)getUser:(NSDictionary *)paramDic withBlock:(void (^)(User *user, NSError *error))block{
     
     NSLog(@"paramDic%@",paramDic);
-    NSDictionary *par = @{@"action": @"userlist"};
+    //直接发送json给服务器端   对应[AFJSONRequestSerializer serializer];
+    NSDictionary *param = paramDic;
     
-    return [[APIClient sharedClient] POST:@"api-test.php" parameters:par success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    //将请求参数转换为json后放入key为jsonString的字典中发送请求    对应[AFHTTPRequestSerializer serializer];
+   // NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    //[parameters setObject:[param dictionaryToJson] forKey:@"jsonString"];
+    
+    //服务器端写法见工程目录的server.php
+    
+    return [[APIClient sharedClient] POST:@"api-test.php" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *result = responseObject;
         
         User *user =  [User objectFromDictionary:[result objectForKey:@"success"]];

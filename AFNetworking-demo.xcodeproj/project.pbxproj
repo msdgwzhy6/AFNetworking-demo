@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2544E9C1980FE320018D6BD /* server.php in Resources */ = {isa = PBXBuildFile; fileRef = A2544E9B1980FE320018D6BD /* server.php */; };
 		A274F329197DFA8500182823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F328197DFA8500182823 /* Foundation.framework */; };
 		A274F32B197DFA8500182823 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F32A197DFA8500182823 /* CoreGraphics.framework */; };
 		A274F32D197DFA8500182823 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F32C197DFA8500182823 /* UIKit.framework */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A2544E9B1980FE320018D6BD /* server.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = server.php; sourceTree = "<group>"; };
 		A274F325197DFA8500182823 /* AFNetworking-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AFNetworking-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A274F328197DFA8500182823 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A274F32A197DFA8500182823 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -237,6 +239,7 @@
 				A2CF98E3197E1DE4004617AB /* MainViewController.m */,
 				A2CF98E4197E1DE4004617AB /* MainViewController.xib */,
 				A274F3B3197DFE6D00182823 /* Constant.h */,
+				A2544E9B1980FE320018D6BD /* server.php */,
 				A274F33A197DFA8500182823 /* Images.xcassets */,
 				A274F32F197DFA8500182823 /* Supporting Files */,
 			);
@@ -481,6 +484,7 @@
 				A2CF98DF197E1DCC004617AB /* NewsDetailViewController.xib in Resources */,
 				A274F33B197DFA8500182823 /* Images.xcassets in Resources */,
 				A2CF98E1197E1DCC004617AB /* NewsViewController.xib in Resources */,
+				A2544E9C1980FE320018D6BD /* server.php in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
