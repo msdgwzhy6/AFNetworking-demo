@@ -1,4 +1,4 @@
-// AFSerialization.h
+// AFURLResponseSerialization.h
 //
 // Copyright (c) 2013-2014 AFNetworking (http://afnetworking.com)
 //
@@ -57,7 +57,7 @@
 - (instancetype) init;
 
 /**
- The string encoding used to serialize parameters.
+ The string encoding used to serialize data received from the server, when no string encoding is specified by the response. `NSUTF8StringEncoding` by default.
  */
 @property (nonatomic, assign) NSStringEncoding stringEncoding;
 

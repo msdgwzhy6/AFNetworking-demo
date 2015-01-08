@@ -1,7 +1,7 @@
 AFNetworking-demo
 =================
 
-AFNetworking2.3的一个完整实现demo<br />  
+AFNetworking2.5.0的一个完整实现demo<br />  
 
 view    项目中的各种viewcontroller<br />  
 
