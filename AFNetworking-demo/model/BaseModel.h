@@ -1,5 +1,5 @@
 //
-//  Util.h
+//  BaseModel.h
 //  AFNetworking-demo
 //
 //  Created by Jakey on 14-7-22.
@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
-@interface Util : NSObject
-+ (NSDate*)dateWithTimeInterval:(NSNumber *)interval;
-+ (NSString*)convertDateToString:(NSDate*)date;
+@interface BaseModel : JSONModel
+- (NSString *)json;
+- (NSDictionary *)dictionary;
 @end

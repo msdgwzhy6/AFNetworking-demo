@@ -11,9 +11,9 @@
 @interface News : BaseModel
 @property (strong, nonatomic) NSString *newsID;
 @property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *description;
-@property (strong, nonatomic) NSString *detailurl;
-@property (strong, nonatomic) NSString *modelid;
+@property (strong, nonatomic) NSString *descr;
+@property (strong, nonatomic) NSString *imgurl;
+@property (strong, nonatomic) NSString<Optional> *modelid;
 
 //返回news 实体数组
 + (NSURLSessionDataTask *)getNewsList:(NSDictionary *)paramDic

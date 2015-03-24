@@ -8,8 +8,8 @@
 
 #import "User.h"
 #import "APIClient.h"
-#import "NSDictionary+Json.h"
-#import "NSString+Dictionary.h"
+#import "NSDictionary+JsonString.h"
+#import "NSString+DictionaryValue.h"
 @implementation User
 + (AFHTTPRequestOperation *)getUser:(NSDictionary *)paramDic withBlock:(void (^)(User *user, NSError *error))block{
     
@@ -23,10 +23,8 @@
     
     //服务器端写法见工程目录的server.php
     
-    return [[APIClient sharedClient] POST:@"api-test.php" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *result = responseObject;
-        
-        User *user =  [User objectFromDictionary:[result objectForKey:@"success"]];
+    return [[APIClient sharedClient] POST:@"getUser.do" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        User *user =  [[User alloc] initWithDictionary:responseObject error:nil];
         
         block(user, nil);
         
@@ -37,5 +35,19 @@
         }
     }];
 }
+
++ (AFHTTPRequestOperation *)getSomeTypes:(NSDictionary *)paramDic
+                             withBlock:(void (^)(NSDictionary *types, NSError *error))block{
+    
+    return [[APIClient sharedClient] POST:@"getTypes.do" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        block(responseObject, nil);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+};
+
 
 @end

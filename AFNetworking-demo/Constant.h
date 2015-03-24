@@ -10,8 +10,7 @@
 #define AFNetworking_demo_Constant_h
 
 
-#define SERVER_IP                     @"http://192.168.1.111:8088"
-#define SERVER_INTERFACES             @"%@/testservice/interfaces/"
+#define SERVER_INTERFACES             @"http://api.skyfox.org/project/afndemo/"
 
 
 #endif

@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *email;
 
 - (IBAction)newsTouched:(id)sender;
-- (IBAction)touched:(id)sender;
+- (IBAction)typeTouched:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *request;
 @end

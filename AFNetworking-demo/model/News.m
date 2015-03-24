@@ -8,10 +8,21 @@
 
 #import "News.h"
 #import "APIClient.h"
-#import "NSDictionary+Json.h"
-#import "NSString+Dictionary.h"
+#import "NSDictionary+JsonString.h"
+#import "NSString+DictionaryValue.h"
 
 @implementation News
+
+//匹配model与json不一致的字段
++(JSONKeyMapper*)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithDictionary:@{
+                                                       @"id": @"newsID"
+                                                       }];
+}
+
+
+
 + (AFHTTPRequestOperation *)getNewsList:(NSDictionary *)paramDic
                               withBlock:(void (^)(NSArray *list, NSError *error))block{
    
@@ -26,19 +37,20 @@
     //服务器端写法见工程目录的server.php
     
     
-    return [[APIClient sharedClient] POST:@"api-test.php" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    return [[APIClient sharedClient] POST:@"newsList.do" parameters:param success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSDictionary *result = responseObject;
-        NSLog(@"result =%@",result);
-        NSArray *list = [result objectForKey:@"success"];
+        NSLog(@"result from server =%@",[result jsonString]);
+        NSArray *list = [result objectForKey:@"dataList"];
         if ([list isKindOfClass:[NSArray class]] && block) {
             
-          NSMutableArray *result = [NSMutableArray arrayWithCapacity:list.count];
-          [list enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-          [result addObject:[News objectFromDictionary:obj]];
-          }];
+          NSMutableArray *resultArray = [NSMutableArray arrayWithCapacity:list.count];
+            for (NSDictionary *dic in list) {
+                [resultArray addObject:[[News alloc] initWithDictionary:dic error:nil]];
+
+            }
             
-          block(list, nil);
+          block(resultArray, nil);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (block) {
@@ -52,11 +64,11 @@
     
     NSLog(@"paramDic%@",paramDic);
     
-    return [[APIClient sharedClient] POST:@"getnewslist.do" parameters:paramDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    return [[APIClient sharedClient] POST:@"newsList.do" parameters:paramDic success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSDictionary *result = responseObject;
         NSLog(@"result =%@",result);
-        NSArray *list = [result objectForKey:@"success"];
+        NSArray *list = [result objectForKey:@"dataList"];
         if ([list isKindOfClass:[NSArray class]] && block) {
             block(list, nil);
         }

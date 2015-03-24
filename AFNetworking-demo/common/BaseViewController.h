@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NSDictionary+SafeAccess.h"
+#import "JKAlert.h"
 @interface BaseViewController : UIViewController
 
 @end

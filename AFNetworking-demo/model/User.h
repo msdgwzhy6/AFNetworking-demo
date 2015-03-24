@@ -11,13 +11,19 @@
 
 @interface User : BaseModel
 @property (strong, nonatomic) NSString *userID;
-@property (strong, nonatomic) NSString *username;
-@property (strong, nonatomic) NSString *userqq;
-@property (strong, nonatomic) NSString *useremail;
-@property (strong, nonatomic) NSURL *avatarImageURL;
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *password;
+@property (strong, nonatomic) NSString *mobile;
+@property (strong, nonatomic) NSString *qq;
+@property (strong, nonatomic) NSString *email;
+@property (strong, nonatomic) NSString *photo;
+
 
 
 + (NSURLSessionDataTask *)getUser:(NSDictionary *)paramDic
                            withBlock:(void (^)(User *user, NSError *error))block;
+
++ (NSURLSessionDataTask *)getSomeTypes:(NSDictionary *)paramDic
+                        withBlock:(void (^)(NSDictionary *types, NSError *error))block;
 
 @end

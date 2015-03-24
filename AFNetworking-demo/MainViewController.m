@@ -10,6 +10,7 @@
 #import "User.h"
 #import "UIImageView+AFNetworking.h"
 #import "NewsViewController.h"
+#import "NSDictionary+JsonString.h"
 @interface MainViewController ()
 
 @end
@@ -30,26 +31,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"主页";
+    self.headPhoto.layer.cornerRadius = self.headPhoto.frame.size.width/2;
+    self.headPhoto.layer.masksToBounds = YES;
+
+    [self loadUserData];
+
 }
 -(void)loadUserData{
     
     NSDictionary *param = @{@"username": @"skyfox",@"password":@"org"};
     [User getUser:param withBlock:^(User *user, NSError *error) {
         if (error) {
-            NSLog(@"网络请求失败");
+            [JKAlert showMessage:@"提示" message:@"网络请求失败"];
             return;
         }
-        self.userName.text = user.username?:@"";
-        self.qq.text = user.userqq?:@"";
-        self.email.text = user.useremail?:@"";
-        [self.headPhoto setImageWithURL:user.avatarImageURL placeholderImage:nil];
+        self.userName.text = user.name?:@"";
+        self.qq.text = user.qq?:@"";
+        self.email.text = user.email?:@"";
+        [self.headPhoto setImageWithURL:[NSURL URLWithString:user.photo]];
     }];
 
-}
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)newsTouched:(id)sender {
@@ -57,7 +58,26 @@
     [self.navigationController pushViewController:news animated:YES];
 }
 
-- (IBAction)touched:(id)sender {
-    [self loadUserData];
+//json 中各种类型的取法
+- (IBAction)typeTouched:(id)sender {
+    [User getSomeTypes:nil withBlock:^(NSDictionary *types, NSError *error) {
+        if (error) {
+            [JKAlert showMessage:@"提示" message:@"网络请求失败"];
+            return;
+        }
+        [JKAlert showMessage:@"提示" message:[types jsonString]];
+        
+        NSDictionary *dic = [types objectForKey:@"object"];    
+        NSArray *array = [types objectForKey:@"array"];
+        NSString *string = [types objectForKey:@"string"];
+        NSString *dateSting = [types objectForKey:@"dateSting"];
+        NSDate *date = [Util dateWithTimeInterval:[types objectForKey:@"date"]];
+        NSNumber *number = [types objectForKey:@"number"];
+        NSNull *null = [types objectForKey:@"null"];
+        
+        
+    }];
 }
+
+
 @end
