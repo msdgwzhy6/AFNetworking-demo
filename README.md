@@ -3,6 +3,8 @@ AFNetworking-demo
 
 ##AFNetworking2.5.0的一个完整实现demo  
 
+![](https://raw.githubusercontent.com/shaojiankui/AFNetworking-demo/master/demo.gif)
+
 ###1.Controller    项目中的各种viewcontroller  
 
 ###2.Common  共通类,各种基类  
