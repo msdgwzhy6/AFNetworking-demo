@@ -19,11 +19,18 @@
 @property (strong, nonatomic) NSString *photo;
 
 
-
+//登陆
 + (NSURLSessionDataTask *)getUser:(NSDictionary *)paramDic
-                           withBlock:(void (^)(User *user, NSError *error))block;
+                          success:(void (^)(User *user))block
+                           failed:(void (^)(NSError *error))error;
 
 + (NSURLSessionDataTask *)getSomeTypes:(NSDictionary *)paramDic
                         withBlock:(void (^)(NSDictionary *types, NSError *error))block;
 
+//注销
++ (void)logoutAccount;
+///获取userdefault中存的用户名 和钥匙串中密码
++ (void)getAccount:(void (^)(NSString *username,NSString *password))block;
+//存储用户名userdefault ,密码到钥匙串
++ (void)saveAccount:(NSString *)name andPassword:(NSString *)password;
 @end

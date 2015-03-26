@@ -63,6 +63,7 @@ static APIClient *_sharedClient = nil;
         
         _sharedClient.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", @"text/plain",nil];
         
+        
     });
     
 

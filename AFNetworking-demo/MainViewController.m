@@ -11,6 +11,8 @@
 #import "UIImageView+AFNetworking.h"
 #import "NewsViewController.h"
 #import "NSDictionary+JsonString.h"
+#import "LoginViewController.h"
+#import "AppDelegate.h"
 @interface MainViewController ()
 
 @end
@@ -34,24 +36,27 @@
     self.headPhoto.layer.cornerRadius = self.headPhoto.frame.size.width/2;
     self.headPhoto.layer.masksToBounds = YES;
 
-    [self loadUserData];
 
 }
--(void)loadUserData{
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     
-    NSDictionary *param = @{@"username": @"skyfox",@"password":@"org"};
-    [User getUser:param withBlock:^(User *user, NSError *error) {
-        if (error) {
-            [JKAlert showMessage:@"提示" message:@"网络请求失败"];
-            return;
-        }
-        self.userName.text = user.name?:@"";
-        self.qq.text = user.qq?:@"";
-        self.email.text = user.email?:@"";
-        [self.headPhoto setImageWithURL:[NSURL URLWithString:user.photo]];
-    }];
+    if (![AppDelegate APP].user) {
+        
+        LoginViewController *login = [[LoginViewController alloc]init];
+        [login finished:^(User *user) {
+            self.userName.text = user.name?:@"";
+            self.qq.text = user.qq?:@"";
+            self.email.text = user.email?:@"";
+            [self.headPhoto setImageWithURL:[NSURL URLWithString:user.photo]];
+        }];
+        
+        [self presentViewController:login animated:YES completion:nil];
 
+    }
 }
+
+
 
 - (IBAction)newsTouched:(id)sender {
     NewsViewController *news = [[NewsViewController alloc]init];

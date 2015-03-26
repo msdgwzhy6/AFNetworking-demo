@@ -12,5 +12,9 @@
 
 #define SERVER_INTERFACES             @"http://api.skyfox.org/project/afndemo/"
 
+//key chiain
+#define KEY_KEYCHAIN_SERVICE  @"AFNetworking-demo"
+#define  KEY_USER_NAME        @"username"
+
 
 #endif

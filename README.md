@@ -16,8 +16,8 @@ AFNetworking-demo
 ###4.Vendor 各种第三方组件  
 ######AFNetworking          网络请求框架
 ######UIKit+AFNetworking    AFNetworking 扩展 
-######JsonModel             字典映射成对象组件
-######category              各种实用扩展 
+######JSONModel             字典映射成对象组件
+######SSKeychain            第三方钥匙串框架 
 
 ###5.Category 各种 Category
 

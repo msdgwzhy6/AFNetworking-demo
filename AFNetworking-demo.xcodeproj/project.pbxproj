@@ -24,6 +24,17 @@
 		A20D51671A15978D001EF153 /* UIProgressView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D51541A15978D001EF153 /* UIProgressView+AFNetworking.m */; };
 		A20D51681A15978D001EF153 /* UIRefreshControl+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D51561A15978D001EF153 /* UIRefreshControl+AFNetworking.m */; };
 		A20D51691A15978D001EF153 /* UIWebView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = A20D51581A15978D001EF153 /* UIWebView+AFNetworking.m */; };
+		A228D0A11AC39A6C00C2A2F9 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A228D0991AC39A6C00C2A2F9 /* NewsCell.m */; };
+		A228D0A21AC39A6C00C2A2F9 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A228D09A1AC39A6C00C2A2F9 /* NewsCell.xib */; };
+		A228D0A31AC39A6C00C2A2F9 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A228D09C1AC39A6C00C2A2F9 /* NewsDetailViewController.m */; };
+		A228D0A41AC39A6C00C2A2F9 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A228D09D1AC39A6C00C2A2F9 /* NewsDetailViewController.xib */; };
+		A228D0A51AC39A6C00C2A2F9 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A228D09F1AC39A6C00C2A2F9 /* NewsViewController.m */; };
+		A228D0A61AC39A6C00C2A2F9 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A228D0A01AC39A6C00C2A2F9 /* NewsViewController.xib */; };
+		A228D0AA1AC39A8F00C2A2F9 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A228D0A81AC39A8F00C2A2F9 /* LoginViewController.m */; };
+		A228D0AB1AC39A8F00C2A2F9 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A228D0A91AC39A8F00C2A2F9 /* LoginViewController.xib */; };
+		A228D0B11AC39DDA00C2A2F9 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = A228D0AE1AC39DDA00C2A2F9 /* SSKeychain.m */; };
+		A228D0B21AC39DDA00C2A2F9 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = A228D0B01AC39DDA00C2A2F9 /* SSKeychainQuery.m */; };
+		A228D0B41AC39DF600C2A2F9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A228D0B31AC39DF600C2A2F9 /* Security.framework */; };
 		A2544E9C1980FE320018D6BD /* server.php in Resources */ = {isa = PBXBuildFile; fileRef = A2544E9B1980FE320018D6BD /* server.php */; };
 		A274F329197DFA8500182823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F328197DFA8500182823 /* Foundation.framework */; };
 		A274F32B197DFA8500182823 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F32A197DFA8500182823 /* CoreGraphics.framework */; };
@@ -35,12 +46,6 @@
 		A274F3CE197E072D00182823 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F3CD197E072D00182823 /* MobileCoreServices.framework */; };
 		A274F3D0197E073800182823 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F3CF197E073800182823 /* SystemConfiguration.framework */; };
 		A274F3D2197E074900182823 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A274F3D1197E074900182823 /* libz.dylib */; };
-		A28670361AC13F0800AAD6A2 /* NewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A286702E1AC13F0800AAD6A2 /* NewsCell.m */; };
-		A28670371AC13F0800AAD6A2 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A286702F1AC13F0800AAD6A2 /* NewsCell.xib */; };
-		A28670381AC13F0800AAD6A2 /* NewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28670311AC13F0800AAD6A2 /* NewsDetailViewController.m */; };
-		A28670391AC13F0800AAD6A2 /* NewsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28670321AC13F0800AAD6A2 /* NewsDetailViewController.xib */; };
-		A286703A1AC13F0800AAD6A2 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28670341AC13F0800AAD6A2 /* NewsViewController.m */; };
-		A286703B1AC13F0800AAD6A2 /* NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28670351AC13F0800AAD6A2 /* NewsViewController.xib */; };
 		A28670411AC13F1C00AAD6A2 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = A286703E1AC13F1C00AAD6A2 /* News.m */; };
 		A28670421AC13F1C00AAD6A2 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = A28670401AC13F1C00AAD6A2 /* User.m */; };
 		A28670461AC13F3E00AAD6A2 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A28670451AC13F3E00AAD6A2 /* APIClient.m */; };
@@ -104,6 +109,23 @@
 		A20D51561A15978D001EF153 /* UIRefreshControl+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIRefreshControl+AFNetworking.m"; sourceTree = "<group>"; };
 		A20D51571A15978D001EF153 /* UIWebView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+AFNetworking.h"; sourceTree = "<group>"; };
 		A20D51581A15978D001EF153 /* UIWebView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+AFNetworking.m"; sourceTree = "<group>"; };
+		A228D0981AC39A6C00C2A2F9 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
+		A228D0991AC39A6C00C2A2F9 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
+		A228D09A1AC39A6C00C2A2F9 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		A228D09B1AC39A6C00C2A2F9 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
+		A228D09C1AC39A6C00C2A2F9 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
+		A228D09D1AC39A6C00C2A2F9 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
+		A228D09E1AC39A6C00C2A2F9 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		A228D09F1AC39A6C00C2A2F9 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		A228D0A01AC39A6C00C2A2F9 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
+		A228D0A71AC39A8F00C2A2F9 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		A228D0A81AC39A8F00C2A2F9 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		A228D0A91AC39A8F00C2A2F9 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A228D0AD1AC39DDA00C2A2F9 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		A228D0AE1AC39DDA00C2A2F9 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		A228D0AF1AC39DDA00C2A2F9 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		A228D0B01AC39DDA00C2A2F9 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
+		A228D0B31AC39DF600C2A2F9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A2544E9B1980FE320018D6BD /* server.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = server.php; sourceTree = "<group>"; };
 		A274F325197DFA8500182823 /* AFNetworking-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AFNetworking-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A274F328197DFA8500182823 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,15 +143,6 @@
 		A274F3CD197E072D00182823 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		A274F3CF197E073800182823 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A274F3D1197E074900182823 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		A286702D1AC13F0800AAD6A2 /* NewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsCell.h; sourceTree = "<group>"; };
-		A286702E1AC13F0800AAD6A2 /* NewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsCell.m; sourceTree = "<group>"; };
-		A286702F1AC13F0800AAD6A2 /* NewsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
-		A28670301AC13F0800AAD6A2 /* NewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsDetailViewController.h; sourceTree = "<group>"; };
-		A28670311AC13F0800AAD6A2 /* NewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsDetailViewController.m; sourceTree = "<group>"; };
-		A28670321AC13F0800AAD6A2 /* NewsDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsDetailViewController.xib; sourceTree = "<group>"; };
-		A28670331AC13F0800AAD6A2 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
-		A28670341AC13F0800AAD6A2 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
-		A28670351AC13F0800AAD6A2 /* NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsViewController.xib; sourceTree = "<group>"; };
 		A286703D1AC13F1C00AAD6A2 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
 		A286703E1AC13F1C00AAD6A2 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		A286703F1AC13F1C00AAD6A2 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
@@ -184,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A228D0B41AC39DF600C2A2F9 /* Security.framework in Frameworks */,
 				A274F3D2197E074900182823 /* libz.dylib in Frameworks */,
 				A274F3D0197E073800182823 /* SystemConfiguration.framework in Frameworks */,
 				A274F3CE197E072D00182823 /* MobileCoreServices.framework in Frameworks */,
@@ -246,6 +260,43 @@
 			path = "UIKit+AFNetworking";
 			sourceTree = "<group>";
 		};
+		A228D0961AC39A4500C2A2F9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A228D0A71AC39A8F00C2A2F9 /* LoginViewController.h */,
+				A228D0A81AC39A8F00C2A2F9 /* LoginViewController.m */,
+				A228D0A91AC39A8F00C2A2F9 /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A228D0971AC39A5900C2A2F9 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A228D0981AC39A6C00C2A2F9 /* NewsCell.h */,
+				A228D0991AC39A6C00C2A2F9 /* NewsCell.m */,
+				A228D09A1AC39A6C00C2A2F9 /* NewsCell.xib */,
+				A228D09B1AC39A6C00C2A2F9 /* NewsDetailViewController.h */,
+				A228D09C1AC39A6C00C2A2F9 /* NewsDetailViewController.m */,
+				A228D09D1AC39A6C00C2A2F9 /* NewsDetailViewController.xib */,
+				A228D09E1AC39A6C00C2A2F9 /* NewsViewController.h */,
+				A228D09F1AC39A6C00C2A2F9 /* NewsViewController.m */,
+				A228D0A01AC39A6C00C2A2F9 /* NewsViewController.xib */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		A228D0AC1AC39DDA00C2A2F9 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				A228D0AD1AC39DDA00C2A2F9 /* SSKeychain.h */,
+				A228D0AE1AC39DDA00C2A2F9 /* SSKeychain.m */,
+				A228D0AF1AC39DDA00C2A2F9 /* SSKeychainQuery.h */,
+				A228D0B01AC39DDA00C2A2F9 /* SSKeychainQuery.m */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
 		A274F31C197DFA8500182823 = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +317,7 @@
 		A274F327197DFA8500182823 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A228D0B31AC39DF600C2A2F9 /* Security.framework */,
 				A274F3D1197E074900182823 /* libz.dylib */,
 				A274F3CF197E073800182823 /* SystemConfiguration.framework */,
 				A274F3CD197E072D00182823 /* MobileCoreServices.framework */,
@@ -314,6 +366,7 @@
 		A274F35E197DFB4A00182823 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A228D0AC1AC39DDA00C2A2F9 /* SSKeychain */,
 				A28670791AC1550E00AAD6A2 /* JSONModel */,
 				A28670671AC14A0000AAD6A2 /* JKAlert */,
 				A20D51331A15978D001EF153 /* AFNetworking */,
@@ -326,15 +379,8 @@
 		A286702C1AC13F0800AAD6A2 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				A286702D1AC13F0800AAD6A2 /* NewsCell.h */,
-				A286702E1AC13F0800AAD6A2 /* NewsCell.m */,
-				A286702F1AC13F0800AAD6A2 /* NewsCell.xib */,
-				A28670301AC13F0800AAD6A2 /* NewsDetailViewController.h */,
-				A28670311AC13F0800AAD6A2 /* NewsDetailViewController.m */,
-				A28670321AC13F0800AAD6A2 /* NewsDetailViewController.xib */,
-				A28670331AC13F0800AAD6A2 /* NewsViewController.h */,
-				A28670341AC13F0800AAD6A2 /* NewsViewController.m */,
-				A28670351AC13F0800AAD6A2 /* NewsViewController.xib */,
+				A228D0971AC39A5900C2A2F9 /* News */,
+				A228D0961AC39A4500C2A2F9 /* Login */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -507,14 +553,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A228D0A21AC39A6C00C2A2F9 /* NewsCell.xib in Resources */,
+				A228D0A41AC39A6C00C2A2F9 /* NewsDetailViewController.xib in Resources */,
 				A2CF98E6197E1DE4004617AB /* MainViewController.xib in Resources */,
-				A28670371AC13F0800AAD6A2 /* NewsCell.xib in Resources */,
-				A28670391AC13F0800AAD6A2 /* NewsDetailViewController.xib in Resources */,
+				A228D0A61AC39A6C00C2A2F9 /* NewsViewController.xib in Resources */,
 				A274F333197DFA8500182823 /* InfoPlist.strings in Resources */,
 				A28670781AC14FB400AAD6A2 /* contentTypes.json in Resources */,
 				A274F33B197DFA8500182823 /* Images.xcassets in Resources */,
-				A286703B1AC13F0800AAD6A2 /* NewsViewController.xib in Resources */,
 				A2544E9C1980FE320018D6BD /* server.php in Resources */,
+				A228D0AB1AC39A8F00C2A2F9 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,10 +576,8 @@
 				A28670941AC1550E00AAD6A2 /* JSONModelArray.m in Sources */,
 				A20D51661A15978D001EF153 /* UIImageView+AFNetworking.m in Sources */,
 				A20D51591A15978D001EF153 /* AFHTTPRequestOperation.m in Sources */,
-				A28670361AC13F0800AAD6A2 /* NewsCell.m in Sources */,
 				A274F339197DFA8500182823 /* AppDelegate.m in Sources */,
 				A28670971AC1550E00AAD6A2 /* NSArray+JSONModel.m in Sources */,
-				A286703A1AC13F0800AAD6A2 /* NewsViewController.m in Sources */,
 				A2CF98E5197E1DE4004617AB /* MainViewController.m in Sources */,
 				A28670961AC1550E00AAD6A2 /* JSONModelError.m in Sources */,
 				A20D51631A15978D001EF153 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
@@ -541,31 +586,36 @@
 				A20D51621A15978D001EF153 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				A28670981AC1550E00AAD6A2 /* JSONAPI.m in Sources */,
 				A28670731AC14D9700AAD6A2 /* NSDictionary+JsonString.m in Sources */,
+				A228D0AA1AC39A8F00C2A2F9 /* LoginViewController.m in Sources */,
 				A20D51641A15978D001EF153 /* UIAlertView+AFNetworking.m in Sources */,
 				A286709C1AC1550E00AAD6A2 /* JSONValueTransformer.m in Sources */,
 				A28670741AC14D9700AAD6A2 /* NSDictionary+SafeAccess.m in Sources */,
 				A28670461AC13F3E00AAD6A2 /* APIClient.m in Sources */,
 				A28670411AC13F1C00AAD6A2 /* News.m in Sources */,
 				A28670751AC14D9700AAD6A2 /* NSString+DictionaryValue.m in Sources */,
-				A28670381AC13F0800AAD6A2 /* NewsDetailViewController.m in Sources */,
+				A228D0B11AC39DDA00C2A2F9 /* SSKeychain.m in Sources */,
 				A28670491AC13F4500AAD6A2 /* BaseModel.m in Sources */,
 				A20D515C1A15978D001EF153 /* AFNetworkReachabilityManager.m in Sources */,
 				A20D51611A15978D001EF153 /* AFURLSessionManager.m in Sources */,
 				A28670421AC13F1C00AAD6A2 /* User.m in Sources */,
 				A20D515E1A15978D001EF153 /* AFURLConnectionOperation.m in Sources */,
 				A20D51601A15978D001EF153 /* AFURLResponseSerialization.m in Sources */,
+				A228D0A31AC39A6C00C2A2F9 /* NewsDetailViewController.m in Sources */,
+				A228D0A51AC39A6C00C2A2F9 /* NewsViewController.m in Sources */,
 				A20D515F1A15978D001EF153 /* AFURLRequestSerialization.m in Sources */,
 				A28670951AC1550E00AAD6A2 /* JSONModelClassProperty.m in Sources */,
 				A28670991AC1550E00AAD6A2 /* JSONHTTPClient.m in Sources */,
 				A286704F1AC13F7400AAD6A2 /* BaseViewController.m in Sources */,
 				A274F335197DFA8500182823 /* main.m in Sources */,
 				A20D51651A15978D001EF153 /* UIButton+AFNetworking.m in Sources */,
+				A228D0B21AC39DDA00C2A2F9 /* SSKeychainQuery.m in Sources */,
 				A286706A1AC14A0000AAD6A2 /* JKAlert.m in Sources */,
 				A28670761AC14D9700AAD6A2 /* NSString+Hash.m in Sources */,
 				A20D51681A15978D001EF153 /* UIRefreshControl+AFNetworking.m in Sources */,
 				A20D515A1A15978D001EF153 /* AFHTTPRequestOperationManager.m in Sources */,
 				A286709B1AC1550E00AAD6A2 /* JSONKeyMapper.m in Sources */,
 				A286709A1AC1550E00AAD6A2 /* JSONModel+networking.m in Sources */,
+				A228D0A11AC39A6C00C2A2F9 /* NewsCell.m in Sources */,
 				A20D515D1A15978D001EF153 /* AFSecurityPolicy.m in Sources */,
 				A28670931AC1550E00AAD6A2 /* JSONModel.m in Sources */,
 				A28670501AC13F7400AAD6A2 /* Util.m in Sources */,

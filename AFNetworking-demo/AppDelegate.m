@@ -9,7 +9,9 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 @implementation AppDelegate
-
++(AppDelegate*)APP{
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
