@@ -12,6 +12,12 @@
 #import "NSString+DictionaryValue.h"
 #import "SSKeychain.h"
 @implementation User
++(BOOL)propertyIsOptional:(NSString*)propertyName
+{
+    return YES;
+}
+
+
 + (AFHTTPRequestOperation *)getUser:(NSDictionary *)paramDic
                           success:(void (^)(User *user))success
                             failed:(void (^)(NSError *error))failed{

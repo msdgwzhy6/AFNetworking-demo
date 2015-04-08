@@ -68,6 +68,7 @@
 		A286709A1AC1550E00AAD6A2 /* JSONModel+networking.m in Sources */ = {isa = PBXBuildFile; fileRef = A286708D1AC1550E00AAD6A2 /* JSONModel+networking.m */; };
 		A286709B1AC1550E00AAD6A2 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = A28670901AC1550E00AAD6A2 /* JSONKeyMapper.m */; };
 		A286709C1AC1550E00AAD6A2 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A28670921AC1550E00AAD6A2 /* JSONValueTransformer.m */; };
+		A2CF59A31AD524C0009D2126 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CF59A21AD524C0009D2126 /* MBProgressHUD.m */; };
 		A2CF98E5197E1DE4004617AB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2CF98E3197E1DE4004617AB /* MainViewController.m */; };
 		A2CF98E6197E1DE4004617AB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CF98E4197E1DE4004617AB /* MainViewController.xib */; };
 /* End PBXBuildFile section */
@@ -187,6 +188,8 @@
 		A28670901AC1550E00AAD6A2 /* JSONKeyMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKeyMapper.m; sourceTree = "<group>"; };
 		A28670911AC1550E00AAD6A2 /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
 		A28670921AC1550E00AAD6A2 /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
+		A2CF59A11AD524C0009D2126 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A2CF59A21AD524C0009D2126 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A2CF98E2197E1DE4004617AB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		A2CF98E3197E1DE4004617AB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		A2CF98E4197E1DE4004617AB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -366,6 +369,7 @@
 		A274F35E197DFB4A00182823 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				A2CF59A01AD524C0009D2126 /* MBProgressHUD */,
 				A228D0AC1AC39DDA00C2A2F9 /* SSKeychain */,
 				A28670791AC1550E00AAD6A2 /* JSONModel */,
 				A28670671AC14A0000AAD6A2 /* JKAlert */,
@@ -502,6 +506,15 @@
 			path = JSONModelTransformations;
 			sourceTree = "<group>";
 		};
+		A2CF59A01AD524C0009D2126 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A2CF59A11AD524C0009D2126 /* MBProgressHUD.h */,
+				A2CF59A21AD524C0009D2126 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -603,6 +616,7 @@
 				A228D0A31AC39A6C00C2A2F9 /* NewsDetailViewController.m in Sources */,
 				A228D0A51AC39A6C00C2A2F9 /* NewsViewController.m in Sources */,
 				A20D515F1A15978D001EF153 /* AFURLRequestSerialization.m in Sources */,
+				A2CF59A31AD524C0009D2126 /* MBProgressHUD.m in Sources */,
 				A28670951AC1550E00AAD6A2 /* JSONModelClassProperty.m in Sources */,
 				A28670991AC1550E00AAD6A2 /* JSONHTTPClient.m in Sources */,
 				A286704F1AC13F7400AAD6A2 /* BaseViewController.m in Sources */,

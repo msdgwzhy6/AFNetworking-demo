@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "JSONModel.h"
-
+//https://github.com/icanzilb/JSONModel  JSONModel使用
 @interface BaseModel : JSONModel
 - (NSString *)json;
 - (NSDictionary *)dictionary;

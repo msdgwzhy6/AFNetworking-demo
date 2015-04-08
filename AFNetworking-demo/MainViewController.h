@@ -16,5 +16,6 @@
 
 - (IBAction)newsTouched:(id)sender;
 - (IBAction)typeTouched:(id)sender;
+- (IBAction)commonTouched:(id)sender;
 
 @end
